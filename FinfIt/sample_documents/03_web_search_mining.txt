@@ -1,0 +1,7 @@
+Web Search Mining
+
+Web search mining studies techniques used to discover, retrieve, organize, and analyze information available on the World Wide Web. Search systems process web pages, create indexes, interpret user queries, and rank pages.
+
+The main categories often discussed are web content mining, web structure mining, and web usage mining. Web content mining analyzes the information present on pages. Web structure mining studies links between pages. Web usage mining analyzes interaction and navigation patterns.
+
+Search quality can be evaluated using measures such as precision, recall, F-measure, and mean average precision. These measures compare retrieved results with documents judged relevant.

@@ -1,0 +1,7 @@
+Database Management Systems
+
+A database management system is software used to store, organize, retrieve, and update data. Relational databases organize information into tables consisting of rows and columns.
+
+SQL is a language used to define and query relational databases. Common operations include SELECT, INSERT, UPDATE, and DELETE. Indexes can improve lookup speed, although they require additional storage and maintenance.
+
+SQLite is a lightweight relational database that stores its data in a local file. It is useful for small applications, prototypes, and educational projects.

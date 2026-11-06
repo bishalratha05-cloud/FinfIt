@@ -1,0 +1,7 @@
+Artificial Intelligence in Everyday Life
+
+Artificial intelligence is a branch of computer science concerned with building systems that perform tasks commonly associated with human intelligence. Examples include language understanding, image recognition, planning, recommendation systems, and decision support.
+
+Machine learning is an important part of artificial intelligence. A machine learning model learns patterns from data and uses those patterns to make predictions. Deep learning uses multi-layer neural networks and is useful for image recognition, speech processing, and language technologies.
+
+AI is used in healthcare to support medical image analysis, patient monitoring, and clinical decision support. These tools can help professionals notice patterns, but they should be evaluated carefully and used with human oversight.

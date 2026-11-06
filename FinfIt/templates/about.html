@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}About — FinfIt{% endblock %}
+{% block content %}
+<div class="page-title"><div class="eyebrow">ABOUT THE PROJECT</div><h1>How FinfIt works</h1>
+<p>FinfIt is an educational document retrieval system built to demonstrate the core ideas of Web Search Mining.</p></div>
+<div class="feature-grid">
+  <article><h3>1. Document processing</h3><p>Text is extracted from supported files, converted to lowercase tokens, and common stop words are removed.</p></article>
+  <article><h3>2. Inverted index</h3><p>The index maps each term to the documents in which it appears, making candidate retrieval efficient.</p></article>
+  <article><h3>3. Ranking</h3><p>TF-IDF or BM25 assigns relevance scores and sorts matching documents.</p></article>
+  <article><h3>4. Retrieval modes</h3><p>Ranked retrieval, basic Boolean operators, and exact phrase matching are available.</p></article>
+</div>
+<div class="note"><strong>Current collection:</strong> {{ document_count }} indexed documents. This is a teaching project, not a full web crawler or a replacement for a commercial search engine.</div>
+{% endblock %}

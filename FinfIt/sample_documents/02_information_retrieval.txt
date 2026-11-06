@@ -1,0 +1,7 @@
+Introduction to Information Retrieval
+
+Information retrieval is the process of finding relevant information from a large collection of documents in response to a user's query. A search engine usually performs document collection, text processing, indexing, query processing, ranking, and result presentation.
+
+An inverted index stores a mapping from each term to the documents that contain that term. This structure helps a search system find candidate documents without scanning every document from beginning to end.
+
+A ranking model estimates how relevant a document is to a query. TF-IDF gives importance to terms that are frequent in a document but less common across the collection. BM25 is a probabilistic ranking function that also considers document length.

@@ -1,0 +1,7 @@
+Python Programming for Data Applications
+
+Python is a general-purpose programming language known for readable syntax and a large ecosystem of libraries. It is widely used in web development, automation, scientific computing, and data analysis.
+
+A Python program can be divided into modules and functions to make it easier to test and maintain. Virtual environments isolate project dependencies. A requirements file records the packages needed to install an application.
+
+Flask is a lightweight Python web framework. It maps URL routes to Python functions and can render HTML templates. Python libraries can also extract text from PDF and DOCX documents.

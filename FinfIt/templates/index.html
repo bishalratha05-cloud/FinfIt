@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}FinfIt — Information Retrieval{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="eyebrow">WEB SEARCH MINING · INFORMATION RETRIEVAL</div>
+  <h1>Find the information<br><span>that matters.</span></h1>
+  <p>Search across indexed documents using information retrieval and ranking algorithms.</p>
+  <form class="search-form" method="post">
+    <input type="search" name="query" value="{{ query }}" placeholder="Try: artificial intelligence healthcare" required>
+    <button type="submit">Search</button>
+    <div class="controls">
+      <label>Ranking
+        <select name="method">
+          <option value="bm25" {% if method == 'bm25' %}selected{% endif %}>BM25</option>
+          <option value="tfidf" {% if method == 'tfidf' %}selected{% endif %}>TF-IDF</option>
+        </select>
+      </label>
+      <label>Search type
+        <select name="mode">
+          <option value="ranked" {% if mode == 'ranked' %}selected{% endif %}>Ranked</option>
+          <option value="boolean" {% if mode == 'boolean' %}selected{% endif %}>Boolean (AND / OR / NOT)</option>
+          <option value="phrase" {% if mode == 'phrase' %}selected{% endif %}>Exact phrase</option>
+        </select>
+      </label>
+    </div>
+  </form>
+  <div class="stats"><strong>{{ document_count }}</strong> documents currently indexed</div>
+</section>
+
+{% if searched %}
+<section class="results">
+  <div class="section-heading">
+    <h2>Search results</h2>
+    <span>{{ results|length }} result(s)</span>
+  </div>
+  {% if results %}
+    {% for result in results %}
+    <article class="result-card">
+      <div class="result-meta">{{ result.source }} · Relevance score: {{ result.score }}</div>
+      <h3>{{ result.title }}</h3>
+      <p>{{ result.snippet }}</p>
+    </article>
+    {% endfor %}
+  {% else %}
+    <div class="empty">No matching documents found. Try different keywords or upload more documents.</div>
+  {% endif %}
+</section>
+{% endif %}
+{% endblock %}

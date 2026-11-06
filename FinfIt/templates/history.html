@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Search history — FinfIt{% endblock %}
+{% block content %}
+<div class="page-title"><div class="eyebrow">YOUR ACTIVITY</div><h1>Search history</h1><p>The latest 50 searches are stored locally in SQLite.</p></div>
+<form method="post" action="{{ url_for('history_clear') }}" class="inline-form">
+  <button class="secondary" type="submit">Clear history</button>
+</form>
+<div class="table-wrap"><table><thead><tr><th>Query</th><th>Algorithm</th><th>Results</th><th>Date and time</th></tr></thead><tbody>
+{% for row in rows %}<tr><td>{{ row[0] }}</td><td>{{ row[1] }}</td><td>{{ row[2] }}</td><td>{{ row[3] }}</td></tr>
+{% else %}<tr><td colspan="4">No searches yet.</td></tr>{% endfor %}
+</tbody></table></div>
+{% endblock %}

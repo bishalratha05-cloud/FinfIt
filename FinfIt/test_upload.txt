@@ -1,0 +1,13 @@
+Information Retrieval System Test Document
+
+This document is created to test the FinfIt
+Information Retrieval System.
+
+Information retrieval is the process of finding
+relevant information from a collection of documents.
+
+Search engines use algorithms such as TF-IDF
+and BM25 to rank documents according to relevance.
+
+Python is widely used for developing information
+retrieval systems and search engines.

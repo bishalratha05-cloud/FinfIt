@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Documents — FinfIt{% endblock %}
+{% block content %}
+<div class="page-title"><div class="eyebrow">DOCUMENT COLLECTION</div><h1>Manage documents</h1>
+<p>Upload TXT, PDF or DOCX files. FinfIt extracts their text and adds them to the index.</p></div>
+<form class="upload-box" method="post" enctype="multipart/form-data">
+  <input type="file" name="document" accept=".txt,.pdf,.docx" required>
+  <button type="submit">Upload and index</button>
+  <small>Maximum file size: 15 MB. Scanned PDFs without selectable text may not be readable.</small>
+</form>
+<h2>Indexed documents ({{ documents|length }})</h2>
+<div class="document-list">
+{% for doc in documents %}<div class="document-row"><span> {{ doc.title }}</span><small>{{ doc.source }}</small></div>
+{% else %}<div class="empty">No documents found.</div>{% endfor %}
+</div>
+{% endblock %}
